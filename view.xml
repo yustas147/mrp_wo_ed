@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <record model="ir.ui.view" id="mrp_routing_form_view_inh1">
+            <field name="name">mrp.routing.form.view.inh1</field>
+            <field name="model">mrp.routing</field>
+            <field name="inherit_id" ref="mrp.mrp_routing_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='workcenter_lines']" position="replace">
+                    <field name='workcenter_lines'>
+                        <tree>
+                             <field name="name"/>
+                             <field name="workcenter_id"/>
+                             <field name="sequence"/>
+                             <!--<field name="convert_product"/>-->
+                             <field name="cycle_nbr"/>
+                             <field name="hour_nbr"/>
+                             <field name="note"/>
+                        </tree>
+                    </field>
+                
+                </xpath>
+            </field>
+        </record>
+
+        <!--<record model="ir.actions.act_window" id="mrp_custom_jobs_form_action">-->
+            <!--<field name="name">Jobs</field>-->
+            <!--<field name="res_model">mrp_custom.jobs</field>-->
+            <!--<field name="view_type">form</field>-->
+            <!--<field name="view_mode">tree,form</field>-->
+            <!--<field name="help" type="html">-->
+                <!--<p class="oe_view_nocontent_create">Create the first job  </p>-->
+            <!--</field>-->
+        <!--</record>-->
+
+        <!--<menuitem id="jobs_menu" name="Jobs"-->
+                  <!--parent="mrp.menu_mrp_manufacturing"-->
+                  <!--action="mrp_custom_jobs_form_action"/>-->
+   </data>
+
+</openerp>
